@@ -12,25 +12,7 @@
 
 #include "fractol.h"
 
-void	usage(int ac, char *s, t_fr *f)
-{
-	f->fractol = 0;
-	if (ac == 2)
-	{
-		!ft_strcmp(s, "mandelbrot") ? f->fractol = 1 : 0;
-		!ft_strcmp(s, "julia") ? f->fractol = 2 : 0;
-		!ft_strcmp(s, "ship") ? f->fractol = 3 : 0;
-		!ft_strcmp(s, "pifagor") ? f->fractol = 4 : 0;
-		!ft_strcmp(s, "tube") ? f->fractol = 5 : 0;
-		if (f->fractol != 0)
-			return ;
-	}
-	if (ac == 1)
-		return ;
-	ft_putstr("Usage : \"./fractol (julia | mandelbrot | ship | "
-				"pifagor | tube)\" or ./fractol\n");
-	exit(1);
-}
+
 
 int		main(int ac, char **av)
 {
